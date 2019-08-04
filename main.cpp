@@ -14,11 +14,11 @@
 #include <time.h>       /* time */
 #include <stdio.h>      /* printf, NULL */
 using namespace std;
-int zivoty = 5;                     //nastaveni poctu zivotu
+int zivoty = 8;                     //nastaveni poctu zivotu
 char pismeno;                       //pismeno nactene z klavesnice
 bool game = true;                   //podminka pro while cyklus
 bool podminka;                      //podminka pro odecitani zivotu
-string arr_slova[10];
+string arr_slova[24];
 int vstup;
 
 void vykresli(char x[], char y[]){                  //vykraslovaci funkce
@@ -41,7 +41,7 @@ int main(){
     if(file.is_open())
     {
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 24; i++)
         {
             file >> arr_slova[i];
         }
@@ -99,7 +99,7 @@ int main(){
            }
        }
         if(zivoty == 0){
-            cout << "Smolik, prohral jsi." << endl;
+            cout << "Smolik, prohral jsi. " << "Slovo bylo: " << hledaneSlovo << endl;
             cout << "Chces hrat znovu? \n(1) Ano\n(2) Ne"<< endl;
            cin >> vstup;
            switch (vstup)
